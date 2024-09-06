@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #1f3b64, #4682b4);
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  width: 70%;
+  max-width: 400px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: #ff5c5c;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e04848;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-buttons button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff5c5c;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* Add this for centering the heart */
+#heartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#heart {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: #ff4d4d;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+  margin: 0 auto; /* This centers the heart horizontally */
+}
+
+#heart::before,
+#heart::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff4d4d;
+  position: absolute;
+}
+
+#heart::before {
+  top: -25px;
+  left: 0;
+}
+
+#heart::after {
+  top: 0;
+  left: 25px;
+}
